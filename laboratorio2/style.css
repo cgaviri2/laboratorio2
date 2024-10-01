@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d4edda; /* Verde claro */
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #28a745; /* Verde fuerte */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #155724; /* Verde fuerte */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #28a745; /* Verde fuerte */
+    border-radius: 5px;
+    background-color: #e9f5e9; /* Verde claro */
+    color: #155724; /* Verde fuerte */
+    font-size: 16px;
+}
+input[type="text"]:focus {
+    border-color: #218838; /* Verde más oscuro */
+    outline: none;
+    box-shadow: 0 0 5px rgba(33, 136, 56, 0.5); /* Sombra verde */
+}
+
+button {
+    display: block;
+    background-color: #218838; /* Verde fuerte */
+    color: white;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #1e7e34; /* Verde más oscuro */
+}
+
+#event-list {
+    margin-top: 30px;
+}
+
+#events {
+    list-style: none;
+    padding: 0;
+}
+
+#events li {
+    background-color: #c3e6cb; /* Verde claro */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+.futuristic-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.futuristic-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.futuristic-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.futuristic-btn:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    color: #fff;
+}
